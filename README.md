@@ -58,7 +58,7 @@ The board was developed for RF-star CC2652P modules. The program EasyEDA was use
 <img src="img/vid3.jpg" style="width:600px;">
 
 ## Видео работы света
-<a target=blank href="https://youtu.be/n97AixJyFCw"><img src="img/vid4.jpg" style="height:400px;"></a>
+<a target="_blank" href="https://youtu.be/n97AixJyFCw"><img src="img/vid4.jpg" style="height:400px;"></a>
 
 ---
 Материалы для изучения:
