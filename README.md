@@ -53,6 +53,8 @@ The board was developed for RF-star CC2652P modules. The program EasyEDA was use
 ## Настройки
 ![схема](img/set1.jpg) ![схема](img/set2.jpg)
 
+С доп. платой со светодиодами нужно в настройках поставить количество диодов 18
+
 ## Внешний вид
 <img src="img/vid2.jpg" style="width:600px;">
 <img src="img/vid3.jpg" style="width:600px;">
