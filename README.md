@@ -1,3 +1,5 @@
+# [Опис українською](README_ukr.md)
+
 # Hardware development SLS board for Xiaomi Gateway
 
 Came to develop my own board for the SLS gateway. Since ordering boards from Russia has become inconvenient and I want to add something of my own. The board is suitable for Xiaomi gateways, and by adding a slot for another latch, it also fits other Aqara and Xiaomi gateways, where one latch is offset. Sometimes a slight modification of the gateway body is required, such as removing the pins that abut against the board or the light sensor tunnel. Everything fits into place.
