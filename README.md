@@ -1,72 +1,61 @@
 # Hardware development SLS board for Xiaomi Gateway
 
-The board was developed for RF-star CC2652P modules. The program EasyEDA was used. A full description will be after assembly and verification. All description will be in Russian. 
+Came to develop my own board for the SLS gateway. Since ordering boards from Russia has become inconvenient and I want to add something of my own. The board is suitable for Xiaomi gateways, and by adding a slot for another latch, it also fits other Aqara and Xiaomi gateways, where one latch is offset. Sometimes a slight modification of the gateway body is required, such as removing the pins that abut against the board or the light sensor tunnel. Everything fits into place.
+
+Today, the SLS board can work both with a standard gateway power board and LEDs or separately. For individual work, there are options for printing on a 3D printer. One addressable diode has been added to the board to indicate the operation of the gateway in auto mode, or you can control the diode separately by setting your own effects. Later, a ring with addressable diodes will be developed for installation instead of the standard gateway power board. In this version, you will still need a power supply to connect the gateway to a power outlet.
+
+The board was developed for RF-star CC2652P modules. The program EasyEDA was used. A complete description is made after assembly and verification in operation. The board will be available for sale in Ukraine for fans of self-assembly.
 
 [Development and verification process here](development.md)
 
-[Development and verification Power&LED board](power_led.md)
+## Schematic diagram of the device
+![scheme](img/SCH.png)
 
-
----
-
-# Разработка платы SLS для шлюзов Xiaomi
-
-Пришел к разработке собственной платы для SLS шлюза. Так как заказывать платы из России стало не удобно и хочется добавить что-то свое. Плата подходит для шлюзов Xiaomi, а за счет добавления прорези под еще одну защелку, подходит и к другим шлюзам Aqara и Xiaomi, где одна защелка смещена. Иногда требуется небольшая модификация корпуса шлюза типа удаления штырьков, которые упираются в плату или тоннеля датчика света. Все подгоняется по месту. 
-
-Сегодня плата SLS может работать как со штатной платой питания шлюза и светодиодами, так и отдельно. Для отдельной работы есть варианты корпусов для печати на 3D принтере. На плату добавлен один адресный диод для индикации работы шлюза в режиме авто, либо можно управлять диодом отдельно задавая свои эффекты. Позже будет в разработке кольцо с адресными диодами для установки вместо штатной платы питания шлюза. В таком исполнении еще понадобится блок питания для подключения шлюза в розетку.
-
-Плата разрабатывалась с нуля под модули RF-star CC2652P. Использовалась программа EasyEDA. Полное описание будет после сборки и проверки в работе. Все описание будет на русском языке. Плата будет доступна к продаже в Украине для любителей самостоятельной сборки.
-
-[Процесс разработки и проверки тут](development.md)
-
-## Принципиальная схема устройства
-![схема](img/SCH.png)
-
-## Собранная плата и разъем для установки в шлюз
+## Assembled board and connector for installation in the gateway
 <img src="img/3.jpg" style="height:450px;"> <img src="img/4.jpg" style="height:450px;">
 
-Для использования платы отдельно от шлюза Xiaomi разъем запаивать не нужно. Достать такие разъемы в Украине оказалось не просто, но вроде можно заказать на Али
+To use the board separately from the Xiaomi gateway, the connector does not need to be soldered. It was not easy to get such connectors in Ukraine, but it seems that you can order on Ali
 
-Для установки нужно укоротить тонель датчика света. У меня Aqara M1S. Такая доработка нужна еще для некоторых шлюзов Xiaomi. Еще удалил один маленький направляющий штырек, который упирался в ESP32.
+To install, you need to shorten the light sensor tunnel. I have an Aqara M1S. Such modification is needed for some Xiaomi gateways. I also removed one small guide pin that was resting on the ESP32.
 <img src="img/5.jpg" style="height:450px;">
 
-Для любителей самостоятельной сборки:
-1. [Гербер](prodaction/Gerber_1.0_PCB1_2023-03-31.zip) файл для заказа платы
-2. [BOM](prodaction/BOM_Board1_PCB1_2023-03-31.xlsx) файл деталей 
+For DIYers:
+1. [Gerber](production/Gerber_1.0_PCB1_2023-03-31.zip) file for ordering the main board
+2. [BOM](production/BOM_Board1_PCB1_2023-03-31.xlsx) details file
 
-## Разработка платы питания вместо штатной
+## Development of a power board instead of the standard one
 
-[Процесс разработки и проверки платы питания и светодиодов](power_led.md)
+[Development and verification Power&LED board](power_led.md)
 
-Была разработана плата питания для замены штатной платы шлюзов Xiaomi и Aqara, для того, чтобы установить на нее адресные диоды на штатные места. Только в штатных местах свет диодов попадает на отражатель и проходит через рассеиватель. Получаем мягкий и смазанный свет. Никаких видимых точек! Даже если светится один светодиод - получаем плавный перелив света по всему кольцу. Дальше будет видео работы световых эффектов.
+A power board was developed to replace the standard board of Xiaomi and Aqara gateways, in order to install addressable diodes on it in regular places. Only in regular places the light of the diodes hits the reflector and passes through the diffuser. We get soft and blurry light. No visible dots! Even if one LED is lit, we get a smooth overflow of light throughout the ring. Next will be a video of the lighting effects.
 
-Блок питания 5В 2А, что был у меня в наличии подходит с запасом. Но он выше свободного места. Придется прорезать плату и устанавливать блок питания через нее. Вышло вот так. 
+The 5V 2A power supply that I had in stock is suitable with a margin. But it is above free space. I will have to cut through the board and install the power supply through it. It came out like this.
 
-## Внешний вид готовой и собранной платы
+## Appearance of the finished and assembled board
 <img src="img/LED4.jpg" style="height:400px;"> <img src="img/LED5.jpg" style="height:400px;">
 
-Для окончательно сборки подключил БП к платному переходу с помощью проводов. Для подключения к сети 220 из кусочков медной фольги сделал две полу трубки и одел на штыри питания 220В. Припаялся проводами. Вот что вышло.
+For the final assembly, I connected the PSU to a board transition using wires. To connect to the 220 power, I made two semi-tubes from pieces of copper foil and put them on 220V power pins. Soldered with wires. Here's what happened.
 
-## Установка платы питания
+## Installing the power board
 <img src="img/LED6.jpg" style="width:600px;">
 <img src="img/LED7.jpg" style="width:600px;">
 <img src="img/LED8.jpg" style="width:600px;">
 
-В собранном виде не отличается от штатного шлюза.
+When assembled, it does not differ from the regular gateway.
 
-## Настройки
-![схема](img/set1.jpg) ![схема](img/set2.jpg)
+## Settings
+![scheme](img/set1.jpg) ![scheme](img/set2.jpg)
 
-С доп. платой со светодиодами нужно в настройках поставить количество диодов 18
+With add. board with LEDs, you need to set the number of diodes in the settings to 18
 
-## Внешний вид
+## Appearance
 <img src="img/vid2.jpg" style="width:600px;">
 <img src="img/vid3.jpg" style="width:600px;">
 
-## Видео работы света
+## Light work video
 <a href="https://youtu.be/n97AixJyFCw" target="_blank"><img src="img/vid4.jpg" style="width:600px;"></a>
 
 ---
-Материалы для изучения:
+Study materials (in Russian):
 * [SLS Github](https://github.com/slsys/Gateway)
-* [SLS Сообщество](https://t.me/slsys)
+* [SLS Community](https://t.me/slsys)
