@@ -1,32 +1,35 @@
-# Плата версии 1.0 в разработке
+# Board version 1.0 in development
 
-## Принципиальная схема платы
-![схема](img/SCH.png)
+## Schematic diagram of the board
+![scheme](img/SCH.png)
 
-## Разводка печатной платы
+## PCB layout
 <img src="img/PCB1.png" style="height:400px;"> <img src="img/PCB2.png" style="height:400px;">
 
-## Внешний вид платы
+## Board appearance
 <img src="img/2D1.png" style="height:400px;"> <img src="img/2D2.png" style="height:400px;">
-
 <img src="img/3D1.png" style="height:400px;"> <img src="img/3D2.png" style="height:400px;">
 
-## Платы полученные с завода
-![схема](img/1.jpg)
-![схема](img/2.jpg)
+## Boards received from the factory
+![diagram](img/1.jpg)
+![diagram](img/2.jpg)
 
-## Собранная плата и разъем для установки в шлюз
+## Assembled board and connector for installation in the gateway
 <img src="img/3.jpg" style="height:450px;"> <img src="img/4.jpg" style="height:450px;">
 
-Для установки нужно укоротить тонель датчика света. У меня Aqara M1S. Такая доработка нужна еще для некоторых шлюзов Xiaomi. Еще удалил один маленький направляющий штырек, который упирался в ESP32.
+To install, you need to shorten the light sensor tunnel. I have an Aqara M1S. Such modification is needed for some Xiaomi gateways. I also removed one small guide pin that was resting on the ESP32.
 <img src="img/5.jpg" style="height:450px;">
 
-## Настройки
-![схема](img/set1.jpg) ![схема](img/set2.jpg)
+## Settings
+![scheme](img/set1.jpg) ![scheme](img/set2.jpg)
 
-## Тестирование
-Для начальной проверки плата запускалась на столе. Прошивки устанавливались через USB разъем путем запайки перемычек на плате. После прошивки модулей плата запустилась и создала точку доступа. Прописываем настройки WiFi и сохраняем. Первый раз плата запускалась очень долго. Состояние Zigbee - 0. Не работает. Хотя в логах активное общение с Zigbee модулем. Дополнительно стер PDM модуля Zigbee (хотя делал стирание при прошивке). Так же изменил канал и PanID (стандатртный пан на другом шлюзе). Перезапускаем - все работает.
-Проверка работы Zigbee CC2652P - устройства подключаются и отвечают. Одно из устройств в дальней комнате. На 2538+2592 сигнал к нему был 10-20 LQI, на модуле 2652 сигнал 80-90 LQI. Отличный результат
-Светодиод отрабатывает, эфекты работают.
-Перепаял перемычки на плате для подключения по USB к ESP32. Так можно смотреть логи на компьютере
-Светодиоды подключенные к Zigbee модулю (зеленый и красный) работают в зависимости от прошивки Zigbee модуля. На последней прошивке Koenkk CC1352P2_CC2652P_launchpad_coordinator_20230507.hex работает только красный. Другие прошивки не проверял.
+## Testing
+For the initial test, the board was launched on the table. The firmware was installed via the USB connector by soldering jumpers on the board. After flashing the modules, the board started up and created an access point. I register the WiFi settings and save. The first time the board started up for a very long time. Zigbee status is 0. Not working. Although there is active communication with the Zigbee module in the logs. Additionally, I erased the PDM of the Zigbee module (although I did the erasure during firmware). I also changed the channel and PanID (standard pan on another gateway). Restart - everything works.
+
+Checking the operation of Zigbee CC2652P - devices connect and respond. One of the devices in the back room. On 2538+2592 the signal to it was 10-20 LQI, on the module 2652 the signal was 80-90 LQI. Excellent result
+
+The LED works, the effects work.
+
+I soldered the jumpers on the board for connecting via USB to the ESP32. So you can see the logs on the computer
+
+The LEDs connected to the Zigbee module (green and red) work depending on the firmware of the Zigbee module. On the latest Koenkk firmware CC1352P2_CC2652P_launchpad_coordinator_20230507.hex only red works. Other firmware did not check.
