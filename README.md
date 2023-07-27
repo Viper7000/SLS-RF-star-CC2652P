@@ -34,7 +34,7 @@ The 5V 2A power supply that I had in stock is suitable with a margin. But it is 
 ## Appearance of the finished and assembled board
 <img src="img/LED4.jpg" style="height:400px;"> <img src="img/LED5.jpg" style="height:400px;">
 
-For the final assembly, I connected the PSU to a board transition using wires. To connect to the 220 power, I made two semi-tubes from pieces of copper foil and put them on 220V power pins. Soldered with wires. Here's what happened.
+For the final assembly, I connected the PSU to a board-to-board connector using wires. To connect to the 220 power, I made two semi-tubes from pieces of copper foil and put them on 220V power pins. Soldered with wires. Here's what happened.
 
 ## Installing the power board
 <img src="img/LED6.jpg" style="width:600px;">
